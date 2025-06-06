@@ -66,7 +66,7 @@ npm i react-native-webview
 ## Step 4: Pass the Collectid along with mode,onSuccess & OnFailure function.
 
 ```
-import {Payment} from '@edviron/react-native-sdk';
+import { Payment } from "ed-react-native-sdk-v2";
 <Payment
           collectId={"xxxxxxxxxxxxxxxxxxxxxx"}
           onSuccess={() => {
