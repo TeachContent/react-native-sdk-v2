@@ -1,0 +1,29 @@
+{
+  "name": "@edviron/react-native-sdk-v2",
+  "version": "1.0.2",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "description": "React Native Payment WebView Component for Edviron Gateway",
+  "keywords": [
+    "react-native",
+    "payment",
+    "webview",
+    "expo",
+    "edviron"
+  ],
+  "author": "edviorn",
+  "license": "MIT",
+  "files": [
+    "src",
+    "index.js",
+    "index.d.ts"
+  ],
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-native": ">=0.68.0",
+    "react-native-webview": "^13.8.6"
+  },
+  "devDependencies": {
+    "react-native-webview": "^13.14.1"
+  }
+}
