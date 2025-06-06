@@ -4,16 +4,19 @@ import { WebView } from "react-native-webview";
 export const Payment = ({ collectId, onSuccess, onFailure, mode, }) => {
     const [webViewUrl, setWebviewUrl] = useState("");
     if (mode !== "production" && mode !== "sandbox") {
-        return (React.createElement(View, { style: styles.errorcontainer },
-            React.createElement(Text, { style: styles.errorText }, "Invalid Payment Mode")));
+        return (<View style={styles.errorcontainer}>
+        <Text style={styles.errorText}>Invalid Payment Mode</Text>
+      </View>);
     }
     if (typeof onSuccess !== "function") {
-        return (React.createElement(View, { style: styles.errorcontainer },
-            React.createElement(Text, { style: styles.errorText }, "onSuccess is not a function")));
+        return (<View style={styles.errorcontainer}>
+        <Text style={styles.errorText}>onSuccess is not a function</Text>
+      </View>);
     }
     if (typeof onFailure !== "function") {
-        return (React.createElement(View, { style: styles.errorcontainer },
-            React.createElement(Text, { style: styles.errorText }, "onFailure is not a function")));
+        return (<View style={styles.errorcontainer}>
+        <Text style={styles.errorText}>onFailure is not a function</Text>
+      </View>);
     }
     useEffect(() => {
         if ((webViewUrl.includes("https://dev.pg.edviron.com/payment-success") ||
@@ -34,8 +37,9 @@ export const Payment = ({ collectId, onSuccess, onFailure, mode, }) => {
     const url = mode === "production"
         ? `https://pg.edviron.com`
         : `https://dev.pg.edviron.com`;
-    return (React.createElement(View, { style: styles.container },
-        React.createElement(WebView, { source: { uri: `${url}/collect-sdk-payments?collect_id=${collectId}` }, style: styles.webview, onNavigationStateChange: handleNavigationStateChange })));
+    return (<View style={styles.container}>
+      <WebView source={{ uri: `${url}/collect-sdk-payments?collect_id=${collectId}` }} style={styles.webview} onNavigationStateChange={handleNavigationStateChange}/>
+    </View>);
 };
 const styles = StyleSheet.create({
     container: {

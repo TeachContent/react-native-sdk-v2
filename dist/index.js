@@ -1,1 +1,1 @@
-export { Payment } from "./src/Payment";
+export { Payment } from "./Payment";

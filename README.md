@@ -23,7 +23,7 @@ For more information read the official documentation
 ## Step 2: Install the React-native-SDK from npm & install dependency
 
 ```
-npm i @edviron/react-native-sdk
+npm i ed-react-native-sdk-v2
 ```
 
 Add Native-webview package using
